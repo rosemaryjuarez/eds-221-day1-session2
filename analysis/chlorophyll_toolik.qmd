@@ -9,10 +9,38 @@ library(here)
 library(tidyverse)
 library(janitor)
 ```
-
+cdfmio
+```{r}
 
 ```{r}
 chlorophyll = read.csv(here::here('data', 'toolik_chlorophyll.csv'),
                        na = '.') %>% 
   clean_names() %>% 
   rename(chl_a = active_chl_a_ug_l) %>% 
+'''
+
+
+
+```
+
+
+
+histogram
+```{r}
+ggplot(data = chlorophyll, aes(x = chl_a)) +
+  geom_histogram()
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
